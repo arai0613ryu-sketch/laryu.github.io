@@ -7,5 +7,52 @@
   </head>
   <body>
     <h1>laryu</h1>
+
+    <h2>About</h2>
+    <p>
+      大学2年生、ゲームが大好き<br>
+      プログラミングを勉強したい
+    </p>
+
+    <h3>Profile</h3>
+    <ul>
+      <li>laryu</li>
+      <li>北海道</li>
+    </ul>
+
+    <h3>Skills</h3>
+    <table>
+      <tr>
+        <th>OS</th>
+        <td>Windows, Ubuntu など</td>
+      </tr>
+      <tr>
+        <th>Tool, MiddleWare</th>
+        <td>Git, PostgreSQL など</td>
+      </tr>
+      <tr>
+        <th>資格・免許</th>
+        <td>剣道2段</td>
+      </tr>
+    </table>
+
+    <h3>Contact</h3>
+    <p>X（旧twitter）</p>
+    <ul>
+      <li><a href="https://twitter.com/laryu_sf6">X(旧 Twitter)</a></li>
+    </ul>
+
+    <h3>History</h3>
+    <p>アルバイト、学歴</p>
+    <table>
+      <tr>
+        <th>2022 年</th>
+        <td><a href="https://www.sej.co.jp/">セブンイレブン</a> アルバイト開始</td>
+      </tr>
+      <tr>
+        <th>2025 年</th>
+        <td>学校法人角川ドワンゴ学園 <a href="https://nnn.ed.jp/">N高等学校</a> 卒業</td>
+      </tr>
+    </table>
   </body>
 </html>
