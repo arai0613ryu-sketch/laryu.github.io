@@ -1,99 +1,34 @@
-/* --------------------
-        全体
--------------------- */
 
+@charset "utf-8";
+
+/* ==================================
+   変数定義（色などの基本設定）
+================================== */
 :root {
-  --theme-color: #00a0a0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 30px;
-  color: #333;
-}
-
-/* --------------------
-        見出し
--------------------- */
-
-h1, h2, h3 {
-  color: var(--theme-color);
-  border-bottom: dashed 0.1em var(--theme-color);
-}
-
-/* --------------------
-        リンク
--------------------- */
-
-a {
-  color: var(--theme-color);
-  text-decoration: none;
-}
-
-/* --------------------
-        リスト
--------------------- */
-
-ul {
-  list-style: none;
-}
-li:before {
-  content: "★";
-  color: var(--theme-color);
-}
-
-/* --------------------
-          表
--------------------- */
-
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border: solid 1px #f0f0f0;
-  min-width: 70%;
-}
-tr {
-  background-color: #fff;
-}
-tr:nth-child(2n) {
-  background-color: #f9f9f9;
-}
-th {
-  background: var(--theme-color);
-  color: #fff;
-}
-th, td {
-  border: solid 1px #f0f0f0;
-  padding: 0.5rem;
-}
-
-/* 変数定義（ライトモードとダークモードの切り替え用） */
-:root {
+    /* ライトモード（通常時）の色 */
+    --theme-color: #00a0a0;
     --bg-color: #f0f2f5;
     --text-color: #333333;
     --card-bg: #ffffff;
-    --primary-color: #1da1f2;
     --border-color: #e1e8ed;
 }
 
 [data-theme="dark"] {
+    /* ダークモード時の色 */
+    --theme-color: #1abc9c; /* ダークモードで見やすい緑に少し変更 */
     --bg-color: #15202b;
     --text-color: #ffffff;
     --card-bg: #1e2732;
-    --primary-color: #1da1f2;
     --border-color: #38444d;
 }
 
-/* 全体の基本設定 */
+/* ==================================
+   全体のリセットと基本設定
+================================== */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
     background-color: var(--bg-color);
@@ -104,6 +39,9 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* ==================================
+   ヘッダー
+================================== */
 header {
     display: flex;
     justify-content: space-between;
@@ -117,6 +55,7 @@ header h1 {
     margin: 0;
     font-size: 1.5rem;
     letter-spacing: 1px;
+    color: var(--theme-color);
 }
 
 /* ダークモードボタン */
@@ -135,9 +74,11 @@ header h1 {
     background-color: var(--border-color);
 }
 
-/* メインコンテンツ（中央寄せ・カード化） */
+/* ==================================
+   メインコンテンツ（中央の白いカード）
+================================== */
 main {
-    max-width: 700px;
+    max-width: 800px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
@@ -150,14 +91,7 @@ section {
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-h2, h3 {
-    border-bottom: 2px solid var(--primary-color);
-    display: inline-block;
-    padding-bottom: 0.3rem;
-    margin-top: 0;
-}
-
-/* アイコン画像 */
+/* アイコン画像周り */
 .hero {
     text-align: center;
 }
@@ -178,36 +112,19 @@ h2, h3 {
     transform: scale(1.05);
 }
 
-/* リスト・テーブルの装飾 */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 0.5rem;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-th, td {
-    padding: 1rem;
-    border-bottom: 1px solid var(--border-color);
-    text-align: left;
-}
-
-th {
-    width: 30%;
-    background-color: rgba(0,0,0,0.03);
-    font-weight: bold;
+/* ==================================
+   見出し・テキスト・リンク
+================================== */
+h2, h3 {
+    color: var(--theme-color);
+    border-bottom: dashed 2px var(--theme-color);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    margin-top: 0;
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--theme-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -216,6 +133,82 @@ a:hover {
     text-decoration: underline;
 }
 
+/* ==================================
+   リスト（★マーク）
+================================== */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+ul li:before {
+    content: "★";
+    color: var(--theme-color);
+    position: absolute;
+    left: 0;
+}
+
+/* ==================================
+   テーブル（表）
+================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border: solid 1px var(--border-color);
+}
+
+th, td {
+    padding: 1rem;
+    border: solid 1px var(--border-color);
+    text-align: left;
+}
+
+th {
+    width: 30%;
+    background-color: var(--theme-color);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tr:nth-child(2n) {
+    background-color: rgba(0,0,0,0.02); /* ダークモードでも馴染む薄い背景 */
+}
+
+/* ==================================
+   埋め込み要素（動画など）
+================================== */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9の比率 */
+    height: 0;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.open-processing .video-container {
+    padding-bottom: 50%; /* OpenProcessing用の高さ調整 */
+}
+
+/* ==================================
+   フッター
+================================== */
 footer {
     text-align: center;
     padding: 1rem;
