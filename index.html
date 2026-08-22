@@ -1,71 +1,86 @@
+HTML
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
     <title>laryuのポートフォリオ</title>
-  </head>
-  <body>
-    <h1>laryu</h1>
-    <img src="Untitled263_20260108180545.png"width="240">
-    <h2>About</h2>
-    <p>
-      大学2年生、ゲームが大好き<br>
-      プログラミングを勉強したい
-    </p>
+</head>
+<body>
+    <header>
+        <h1>laryu</h1>
+        <button id="theme-toggle">🌙 ダークモード</button>
+    </header>
 
-<h3>Profile</h3>
-    <ul>
-      <li>名：laryu</li>
-      <li>所在地：北海道</li>
-      <li>プログラミング勉強中</li>
-    </ul>
-    
-    <h3>Personality</h3>
-    <table>
-      <tr>
-        <th>長所</th>
-        <td>協調性がある、笑顔が多い</td>
-      </tr>
-      <tr>
-        <th>短所</th>
-        <td>優柔不断、怠惰</td>
-      </tr>
-    </table>
-
-    <h3>Contact</h3>
-    <p>X（旧twitter）</p>
-    <ul>
-      <li><a href="https://twitter.com/laryu_sf6">X(旧 Twitter)</a></li>
-    </ul>
-
-    <h3>History</h3>
-    <p>アルバイト、学歴</p>
-    <table>
-      <tr>
-        <th>2022 年</th>
-        <td><a href="https://www.sej.co.jp/">セブンイレブン</a> アルバイト開始</td>
-      </tr>
-      <tr>
-        <th>2025 年</th>
-        <td>学校法人角川ドワンゴ学園 <a href="https://nnn.ed.jp/">N高等学校</a> 卒業</td>
-      </tr>
-    </table>
-    <h3>好きな動画</h3>
-    <iframe 
-      width="560" height="315" src="https://www.youtube.com/embed/EuPE53GKuxo?si=X0twTuJbOK48xeR-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-    </iframe>
-    <h3>open processing</h3>
-    <iframe src="https://openprocessing.org/sketch/2962224/embed/" width="800" height="400"></iframe>
-    <section class="favorites">
-            <h3>好きな動画</h3>
-            <p>Coming Soon...</p>
+    <main>
+        <section class="hero">
+            <img src="Untitled263_20260108180545.png" width="240" alt="laryuのアイコン" id="profile-img">
+            <h2>About</h2>
+            <p>
+                大学2年生、ゲームが大好き🎮<br>
+                プログラミングを勉強したい💻
+            </p>
         </section>
-        
+
+        <section class="profile">
+            <h3>Profile</h3>
+            <ul>
+                <li><strong>名：</strong>laryu</li>
+                <li><strong>所在地：</strong>北海道</li>
+                <li><strong>ステータス：</strong>プログラミング勉強中</li>
+            </ul>
+        </section>
+
+        <section class="personality">
+            <h3>Personality</h3>
+            <table>
+                <tr>
+                    <th>長所</th>
+                    <td>協調性がある、笑顔が多い</td>
+                </tr>
+                <tr>
+                    <th>短所</th>
+                    <td>優柔不断、怠惰</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="contact">
+            <h3>Contact</h3>
+            <p>X（旧twitter）</p>
+            <ul>
+                <li><a href="https://twitter.com/laryu_sf6" target="_blank" rel="noopener">@laryu_sf6</a></li>
+            </ul>
+        </section>
+
+        <section class="history">
+            <h3>History</h3>
+            <p>アルバイト、学歴</p>
+            <table>
+                <tr>
+                    <th>2022 年</th>
+                    <td><a href="https://www.sej.co.jp/" target="_blank" rel="noopener">セブンイレブン</a> アルバイト開始</td>
+                </tr>
+                <tr>
+                    <th>2025 年</th>
+                    <td>学校法人角川ドワンゴ学園 <a href="https://nnn.ed.jp/" target="_blank" rel="noopener">N高等学校</a> 卒業</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="favorites">
+            <h3>好きな動画</h3>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EuPE53GKuxo?si=X0twTuJbOK48xeR-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
         <section class="open-processing">
             <h3>open processing</h3>
-            <p>Coming Soon...</p>
+            <div class="video-container">
+                <iframe src="https://openprocessing.org/sketch/2962224/embed/" width="800" height="400"></iframe>
+            </div>
         </section>
     </main>
 
@@ -73,6 +88,7 @@
         <p>&copy; 2026 laryu</p>
     </footer>
 
+    <!-- JavaScriptファイルの読み込み -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
